@@ -1,0 +1,117 @@
+centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout1{
+    border-style: inset;
+    border-color: black;
+    border-width: thick;
+    width: 100%;
+    height: 200vh;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr;
+    grid-template-areas: 'contenido1'
+                         'contenido2'
+                         'contenido3'
+                         'contenido4'
+                         'contenido5'
+                         'contenido6'
+                         'contenido7'
+                         'contenido8'
+                         'contenido9'
+                         'contenido10'
+
+}
+.contenido1{
+    grid-area: contenido1;
+    background-color: rgb(9, 91, 64);
+    border-radius: 20px;
+}
+.contenido2{
+    grid-area: contenido2;
+    background-color: rgb(23, 123, 66);
+    border-radius: 20px;
+}
+.contenido3{
+    grid-area: contenido3;
+    background-color: rgb(2, 68, 46);
+    border-radius: 20px;
+}
+.contenido4{
+    grid-area: contenido4;
+    background-color: rgb(15, 18, 106);
+    border-radius: 20px;
+}
+.contenido5{
+    grid-area: contenido5;
+    background-color: rgb(134, 20, 121);
+    border-radius: 20px;
+}
+.contenido6{
+    grid-area: contenido6;
+    background-color: rgb(44, 162, 18);
+    border-radius: 20px;
+}
+.contenido7{
+    grid-area: contenido7;
+    background-color: rgb(164, 34, 34);
+    border-radius: 20px;
+}
+.contenido8{
+    grid-area: contenido8;
+    background-color: rgb(73, 6, 82);
+    border-radius: 20px;
+}
+
+.contenido9{
+    grid-area: contenido9;
+    background-color: rgb(9, 91, 64);
+    border-radius: 20px;
+}
+.contenido10{
+    grid-area: contenido10;
+    background-color: rgb(23, 123, 66);
+    border-radius: 20px;
+}
+
+
+
+.section{
+    background-color: rgb(0, 0, 0);
+    border-style: inset;
+    border-color: black;
+}
+
+@media only screen and (min-width: 768px){
+    .layout{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-rows: 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr;
+        grid-template-areas: 'contenido1 contenido1 contenido1 contenido1'
+                             'contenido1 contenido1 contenido1 contenido1'
+                             'contenido2 contenido2 contenido2 contenido2'
+                             'contenido2 contenido2 contenido2 contenido2'
+                             'contenido3 contenido3 contenido3 contenido3'
+                             'contenido3 contenido3 contenido3 contenido3'
+                             'contenido4 contenido4 contenido4 contenido4'
+                             'contenido4 contenido4 contenido4 contenido4'
+                             'contenido5 contenido5 contenido5 contenido5'
+                             'contenido5 contenido5 contenido5 contenido5'
+                             'contenido6 contenido6 contenido6 contenido6'
+                             'contenido6 contenido6 contenido6 contenido6'
+                             'contenido7 contenido7 contenido7 contenido7'
+                             'contenido7 contenido7 contenido7 contenido7'
+                             'contenido8 contenido8 contenido8 contenido8'
+                             'contenido8 contenido8 contenido8 contenido8'
+                             'contenido9 contenido9 contenido9 contenido9'
+                             'contenido9 contenido9 contenido9 contenido9'
+                             'contenido10 contenido10 contenido10 contenido10'
+                             'contenido10 contenido10 contenido10 contenido10';
+                             
+    }
+
+}
