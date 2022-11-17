@@ -1,6 +1,48 @@
 import React from 'react'
 import { Pie } from 'react-chartjs-2'
-import 'chart.js/auto'
+
+export default class PieChart extends React.Component {
+  constructor (props) {
+    super(props)
+  }
+
+  render () {
+    const data = {
+      labels: this.props.labels,
+      datasets: [
+        {
+          label: this.props.label,
+          backgroundColor: '#EC932F',
+          borderColor: 'rgba(255,99,132,1)',
+          borderWidth: 1,
+          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+          hoverBorderColor: 'rgba(255,99,132,1)',
+          data: this.props.data
+        }
+      ]
+    }
+
+    const options = {
+      plugins: {
+        title: {
+          display: true,
+          text: this.props.title,
+          color: 'blue',
+          font: {
+            size: 34
+          },
+          padding: {
+            top: 30,
+            bottom: 30
+          },
+          animation: {
+            animateScale: true
+          }
+        }
+      }
+    }
+  }
+}
 
 function PieChartGraph () {
   const data = {
@@ -50,5 +92,3 @@ function PieChartGraph () {
     </div>
   )
 }
-
-export default PieChartGraph

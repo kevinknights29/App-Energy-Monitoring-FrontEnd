@@ -15,7 +15,6 @@
 .month_default_event_bar {
   left: 0px;
   width: 30px;
-
 }
 .month_default_event_bar_inner {
   background: #888888;
@@ -34,7 +33,29 @@
   content: '';
 }
 
-.icon-blue:before { background-color: #3c78d8; }
-.icon-green:before { background-color: #6aa84f; }
-.icon-yellow:before { background-color: #e69138; }
-.icon-red:before { background-color: #cc0000; }
+.icon-blue:before {
+  background-color: blue;
+}
+.icon-green:before {
+  background-color: green;
+}
+.icon-yellow:before {
+  background-color: yellow;
+}
+.icon-red:before {
+  background-color: red;
+}
+.icon-purple:before {
+  background-color: purple;
+}
+.icon-brown:before {
+  background-color: brown;
+}
+
+.le ul {
+  list-style: none;
+}
+
+.a {
+  text-align: right;
+}

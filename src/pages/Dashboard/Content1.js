@@ -1,10 +1,22 @@
-import React, { Component } from 'react';
-import { Bar} from 'react-chartjs-2';
+import React, { Component } from 'react'
+import { Bar } from 'react-chartjs-2'
+import 'chart.js/auto'
 
-export default class Button extends Component {
-  render() {
-    const dataBar = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September'],
+export default class BarChart extends Component {
+  render () {
+    const labels = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September'
+    ]
+    const data = {
+      labels: labels,
       datasets: [
         {
           label: 'Mdataset',
@@ -14,23 +26,15 @@ export default class Button extends Component {
           hoverBackgroundColor: 'rgba(255,99,132,0.4)',
           hoverBorderColor: 'rgba(255,99,132,1)',
           data: [65, 59, 80, 81, 56, 55, 40, 50, 60]
-        },
-       
+        }
       ]
-    };
+    }
 
     return (
       <div>
         <h2>Bar</h2>
-        <Bar
-          data={dataBar}
-          width={300}
-          height={300}
-        />
-        
+        <Bar data={data} />
       </div>
-    );
-
+    )
   }
 }
-

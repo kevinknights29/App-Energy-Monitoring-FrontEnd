@@ -1,10 +1,11 @@
+import React from "react"
 import "./Manual.css"
 
 
 function Manual() {
-    return (<h1 className="manual">
-        Manual
-        </h1>)
+    return (
+        <h1 className="manual">Manual</h1>
+    )
   }
   
-  export default Manual
+export default Manual
