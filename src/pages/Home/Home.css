@@ -3,22 +3,96 @@
 }
 
 .header {
-    padding:128px 16px;
+    padding: 128px 16px;
     background-color: lightblue;
     text-align: center;
+    position: relative;
+
 }
+
+.header a {
+    position: relative;
+
+}
+
 .header h1 {
     font-size: 64px;
+    text-align: center;
+    position: relative;
 }
 
 .content h2 {
     font-size: 48px;
+    text-align: right;
+    padding: 10px;
 }
+
 .content p {
     font-size: 24px;
+    text-align: justify;
+}
+
+.content1 h2 {
+    font-size: 48px;
+    text-align: left;
+    padding: 10px;
+}
+
+.content1 p {
+    font-size: 24px;
+    text-align: justify;
 }
 
 #proposal {
     background-color: lightgray;
 }
 
+.demo-bg {
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 470px;
+}
+
+
+
+.fa {
+    left: 40px;
+    float: right;
+    height: 470px;
+    width: 50%;
+    padding: 10px;
+}
+
+.fa1 {
+    padding: 5px;
+}
+
+
+.f {
+    left: 40px;
+    float: left;
+    height: 250px;
+    width: 50%;
+    padding: 5px;
+}
+
+.f1 {
+
+    padding: 50px;
+}
+
+
+.fe {
+    left: 40px;
+    float: right;
+    height: 550px;
+    width: 50%;
+    padding: 10px;
+}
+
+.fe1 {
+    padding: 5px;
+}

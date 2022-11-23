@@ -1,9 +1,39 @@
 import React from 'react'
+import { Box, ThemeProvider, createTheme } from '@mui/system'
 
-const Content21 = () => {
+const theme = createTheme({
+  palette: {
+    background: {
+      paper: '#fff'
+    },
+    text: {
+      primary: '#173A5E',
+      secondary: '#46505A'
+    },
+    action: {
+      active: '#001E3C'
+    },
+    success: {
+      dark: '#009688'
+    }
+  }
+})
+
+export default function Example() {
   return (
-    <div>Content8</div>
+    <ThemeProvider theme={theme}>
+      <Box
+        sx={{
+          p: 2,
+          minWidth: 300
+        }}
+      >
+        <Box sx={{ color: 'white' }}>Consumo total en una hora </Box> <br />
+        <Box sx={{ color: 'whitey', fontSize: 34, fontWeight: 'medium' }}>
+          98.3 Wh
+        </Box>
+
+      </Box>
+    </ThemeProvider>
   )
 }
-
-export default Content21

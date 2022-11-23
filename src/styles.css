@@ -6,13 +6,11 @@ body {
   margin: 0;
 }
 
-
-
 .nav {
   background-color: #333;
   color: white;
   align-items: normal;
-  
+
 }
 
 .site-title {
@@ -45,40 +43,29 @@ body {
 }
 
 .nav li.active {
-  background-color: #555; 
+  background-color: #555;
 }
 
 .nav li:hover {
   background-color: #777;
 }
 
-
-
-.Hola {
- 
-  padding: 5px 200px;
-  margin: 0px 600px;
-
-
-}
-
 .logo {
-  width: 150px ;
-  height: 150px ;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
 .calendar {
-  width: 25px ;
-  height: 25px ;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background-color: black;
- 
 }
 
 .sug {
-  width: 70px ;
-  height: 70px ;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: black;
 }
@@ -90,8 +77,8 @@ body {
 }
 
 .man {
-  width: 70px ;
-  height: 70px ;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: black;
 }

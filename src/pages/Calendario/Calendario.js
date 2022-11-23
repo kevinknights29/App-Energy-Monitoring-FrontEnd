@@ -1,144 +1,122 @@
-import React, { Component } from 'react'
-import {
-  DayPilot,
-  DayPilotMonth,
-  DayPilotNavigator
-} from '@daypilot/daypilot-lite-react'
-import './Calendario.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquare } from '@fortawesome/free-solid-svg-icons'
+import React, { Component } from 'react';
+import { DayPilot, DayPilotMonth, DayPilotNavigator } from "@daypilot/daypilot-lite-react";
+import "./Calendario.css";
 
 const styles = {
   wrap: {
-    display: 'flex'
+    display: "flex"
   },
   left: {
-    marginRight: '10px'
+    marginRight: "10px"
   },
   main: {
-    flexGrow: '1'
+    flexGrow: "1"
   }
-}
+};
 
 class MonthlyCalendar extends Component {
-  constructor (props) {
-    super(props)
 
-    this.calendarRef = React.createRef()
+  constructor(props) {
+    super(props);
+
+    this.calendarRef = React.createRef();
 
     this.state = {
       eventHeight: 30,
       headerHeight: 30,
       cellHeaderHeight: 25,
       onBeforeEventRender: args => {
-        args.data.borderColor = 'darker'
+        args.data.borderColor = "darker";
         if (args.data.backColor) {
-          args.data.barColor = DayPilot.ColorUtil.darker(
-            args.data.backColor,
-            -1
-          )
+          args.data.barColor = DayPilot.ColorUtil.darker(args.data.backColor, -1);
         }
       },
       contextMenu: new DayPilot.Menu({
         items: [
           {
-            text: 'Delete',
+            text: "Delete",
             onClick: args => {
-              const e = args.source
-              this.calendar.events.remove(e)
+              const e = args.source;
+              this.calendar.events.remove(e);
             }
           },
           {
-            text: '-'
+            text: "-"
           },
           {
-            text: 'Blue',
-            icon: 'icon icon-blue',
-            color: '#3d85c6',
+            text: "Blue",
+            icon: "icon icon-blue",
+            color: "#3d85c6",
             onClick: args => this.updateColor(args.source, args.item.color)
           },
           {
-            text: 'Green',
-            icon: 'icon icon-green',
-            color: '#6aa84f',
+            text: "Green",
+            icon: "icon icon-green",
+            color: "#6aa84f",
             onClick: args => this.updateColor(args.source, args.item.color)
           },
           {
-            text: 'Yellow',
-            icon: 'icon icon-yellow',
-            color: '#ecb823',
+            text: "Yellow",
+            icon: "icon icon-yellow",
+            color: "#ecb823",
             onClick: args => this.updateColor(args.source, args.item.color)
           },
           {
-            text: 'Red',
-            icon: 'icon icon-red',
-            color: '#d5663e',
+            text: "Red",
+            icon: "icon icon-red",
+            color: "#d5663e",
             onClick: args => this.updateColor(args.source, args.item.color)
           },
-
           {
-            text: 'Purple',
-            icon: 'icon icon-purple',
-            color: '#B695C0',
-            onClick: args => this.updateColor(args.source, args.item.color)
-          },
-
-          {
-            text: 'Chocolate',
-            icon: 'icon icon-brown',
-            color: '#D2691E',
-            onClick: args => this.updateColor(args.source, args.item.color)
-          },
-
-          {
-            text: 'Auto',
+            text: "Auto",
             color: null,
             onClick: args => this.updateColor(args.source, args.item.color)
-          }
+          },
+
         ]
       }),
       onTimeRangeSelected: async args => {
-        const modal = await DayPilot.Modal.prompt(
-          'Create a new event:',
-          'Event 1'
-        )
+        const modal = await DayPilot.Modal.prompt("Create a new event:", "Event 1");
 
-        this.calendar.clearSelection()
+        this.calendar.clearSelection();
         if (!modal.result) {
-          return
+          return;
         }
         this.calendar.events.add({
           start: args.start,
           end: args.end,
           id: DayPilot.guid(),
           text: modal.result
-        })
-      }
-    }
+        });
+      },
+    };
   }
 
-  updateColor (e, color) {
-    e.data.backColor = color
-    this.calendar.events.update(e)
+
+
+  updateColor(e, color) {
+    e.data.backColor = color;
+    this.calendar.events.update(e);
   }
 
-  get calendar () {
-    return this.calendarRef.current.control
+
+  get calendar() {
+    return this.calendarRef.current.control;
   }
 
-  render () {
+  render() {
     return (
       <div>
         <div style={styles.wrap}>
           <div style={styles.left}>
             <DayPilotNavigator
-              selectMode={'week'}
+              selectMode={"week"}
               startDate={DayPilot.Date.today()}
-              selectionDay={'2023-03-07'}
+              selectionDay={"2023-03-07"}
               onTimeRangeSelected={args => {
                 this.calendar.update({
                   startDate: args.day
-                })
+                });
               }}
             />
           </div>
@@ -146,53 +124,12 @@ class MonthlyCalendar extends Component {
             {...this.state}
             ref={this.calendarRef}
             startDate={DayPilot.Date.today()}
+
           />
         </div>
-        <div className='le'>
-          <ul>
-            <li>
-              <header className='header2'>
-                <FontAwesomeIcon icon={faSquare} size='3x' color='blue' />
-                Hacer limpieza a las lámparas como parte del plan de
-                mantenimiento.
-              </header>
-            </li>
-            <li>
-              <header className='header2'>
-                <FontAwesomeIcon icon={faSquare} size='3x' color='green' />
-                Revisar los circuitos para evitar conexiones impropias.
-              </header>
-            </li>
-            <li>
-              <header className='header2'>
-                <FontAwesomeIcon icon={faSquare} size='3x' color='yellow' />
-                Evaluación del consumo eléctrico.
-              </header>
-            </li>
-            <li>
-              <header className='header2'>
-                <FontAwesomeIcon icon={faSquare} size='3x' color='red' />
-                Evaluación de artefactos dañados durante las jornadas escolares.
-              </header>
-            </li>
-            <li>
-              <header className='header2'>
-                <FontAwesomeIcon icon={faSquare} size='3x' color='purple' />
-                Revisión de los artefactos eléctricos.
-              </header>
-            </li>
-            <li>
-              <header className='header2'>
-                <FontAwesomeIcon icon={faSquare} size='3x' color='brown' />
-                Cambio de artefactos eléctricos de acuerdo a programa de
-                renovación.
-              </header>
-            </li>
-          </ul>
-        </div>
       </div>
-    )
+    );
   }
 }
 
-export default MonthlyCalendar
+export default MonthlyCalendar;

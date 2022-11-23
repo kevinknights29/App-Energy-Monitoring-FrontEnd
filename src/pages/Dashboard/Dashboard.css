@@ -3,18 +3,22 @@
   justify-content: center;
   align-items: center;
 }
+
+.Dash {
+  font-size: 50px;
+}
+
 .layout {
   border-style: inset;
-  border-color: black;
+  border-color: rgb(0, 0, 0);
   border-width: thick;
   width: 100%;
-  height: 200vh;
+  height: 300vh;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 100%;
   grid-template-rows: 5fr 5fr 5fr 5fr 2fr 2fr 1fr;
-  grid-template-areas:
-    'content1'
+  grid-template-areas: 'content1'
     'content2'
     'content3'
     'content4'
@@ -35,121 +39,164 @@
     'content19'
     'content20'
     'content21'
-    'content22';
+    'content22'
+    'content23'
+    'content24'
+    'content25';
+
 }
+
 .content1 {
   grid-area: content1;
-  background-color: rgb(9, 91, 64);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  color: black;
 }
+
 .content2 {
   grid-area: content2;
-  background-color: rgb(23, 123, 66);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  color: black;
 }
+
 .content3 {
   grid-area: content3;
-  background-color: rgb(2, 68, 46);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  color: black;
 }
+
 .content4 {
   grid-area: content4;
-  background-color: rgb(15, 18, 106);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  color: black;
 }
+
 .content5 {
   grid-area: content5;
-  background-color: rgb(134, 20, 121);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
+
 .content6 {
   grid-area: content6;
-  background-color: rgb(44, 162, 18);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
+
 .content7 {
   grid-area: content7;
-  background-color: rgb(164, 34, 34);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
+
 .content8 {
   grid-area: content8;
-  background-color: rgb(73, 6, 82);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
 
 .content9 {
   grid-area: content9;
-  background-color: rgb(9, 91, 64);
+  background-color: rgb(59, 71, 162);
   border-radius: 10px;
 }
+
 .content10 {
   grid-area: content10;
-  background-color: rgb(23, 123, 66);
+  background-color: rgb(71, 142, 255);
   border-radius: 10px;
 }
+
 .content11 {
   grid-area: content11;
-  background-color: rgb(2, 68, 46);
+  background-color: rgb(55, 162, 255);
   border-radius: 10px;
 }
+
 .content12 {
   grid-area: content12;
-  background-color: rgb(15, 18, 106);
+  background-color: rgb(11, 122, 240);
   border-radius: 10px;
 }
+
 .content13 {
   grid-area: content13;
-  background-color: rgb(134, 20, 121);
+  background-color: rgb(59, 71, 162);
   border-radius: 10px;
 }
+
 .content14 {
   grid-area: content14;
-  background-color: rgb(44, 162, 18);
+  background-color: rgb(71, 142, 255);
   border-radius: 10px;
 }
+
 .content15 {
   grid-area: content15;
-  background-color: rgb(164, 34, 34);
+  background-color: rgb(55, 162, 255);
   border-radius: 10px;
 }
+
 .content16 {
   grid-area: content16;
-  background-color: rgb(73, 6, 82);
+  background-color: rgb(11, 122, 240);
   border-radius: 10px;
 }
 
 .content17 {
   grid-area: content17;
-  background-color: rgb(9, 91, 64);
+  background-color: rgb(59, 71, 162);
   border-radius: 10px;
 }
+
 .content18 {
   grid-area: content18;
-  background-color: rgb(23, 123, 66);
+  background-color: rgb(71, 142, 255);
   border-radius: 10px;
 }
 
 .content19 {
   grid-area: content19;
-  background-color: rgb(9, 91, 64);
+  background-color: rgb(55, 162, 255);
   border-radius: 10px;
 }
+
 .content20 {
   grid-area: content20;
-  background-color: rgb(23, 123, 66);
+  background-color: rgb(11, 122, 240);
   border-radius: 10px;
 }
 
 .content21 {
   grid-area: content21;
-  background-color: rgb(8, 37, 13);
+  background-color: rgb(59, 71, 162);
   border-radius: 10px;
 }
 
 .content22 {
   grid-area: content22;
-  background-color: rgb(21, 219, 107);
+  background-color: rgb(59, 71, 162);
+  border-radius: 10px;
+}
+
+.content23 {
+  grid-area: content23;
+  background-color: rgb(59, 71, 162);
+  border-radius: 10px;
+}
+
+.content24 {
+  grid-area: content24;
+  background-color: rgb(59, 71, 162);
+  border-radius: 10px;
+}
+
+.content25 {
+  grid-area: content25;
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
 
@@ -157,6 +204,9 @@
   background-color: rgb(0, 0, 0);
   border-style: inset;
   border-color: black;
+  color: white;
+  text-align: center;
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -166,9 +216,8 @@
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(4, 293px);
-    grid-template-rows: 10fr 10fr 10fr 10fr 2fr 10fr 1fr 5fr 5fr;
-    grid-template-areas:
-      'content1 content1 content2 content2'
+    grid-template-rows: 10fr 10fr 10fr 10fr 2fr 2fr 1fr 5fr 5fr;
+    grid-template-areas: 'content1 content1 content2 content2'
       'content1 content1 content2 content2'
       'content3 content3 content4 content4'
       'content3 content3 content4 content4'
@@ -176,7 +225,12 @@
       'content9 content10 content11 content12'
       'content13 content14 content15 content16'
       'content17 content18 content19 content20'
-      'content21 content21 content21 content21'
-      'content22 content22 content22 content22';
+      'content25 content25 content25 content25'
+      'content21 content22 content23 content24';
+
   }
+}
+
+.Calend {
+  font-size: 50px;
 }

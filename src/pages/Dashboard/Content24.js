@@ -28,9 +28,11 @@ export default function Example() {
           minWidth: 300
         }}
       >
-        <Box sx={{ color: 'white' }}>AMPERAJE 2</Box> <br />
+        <Box sx={{ color: 'white' }}>
+          Costo total (Últimos 30 días)
+        </Box> <br />
         <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium' }}>
-          98.3 A
+          B/. 34
         </Box>
       </Box>
     </ThemeProvider>

@@ -3,6 +3,7 @@ centered {
   justify-content: center;
   align-items: center;
 }
+
 .layout1 {
   border-style: inset;
   border-color: black;
@@ -12,8 +13,7 @@ centered {
   display: grid;
   grid-gap: 10px;
   grid-template-rows: 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr;
-  grid-template-areas:
-    'contenido1'
+  grid-template-areas: 'contenido1'
     'contenido2'
     'contenido3'
     'contenido4'
@@ -22,13 +22,17 @@ centered {
     'contenido7'
     'contenido8'
     'contenido9'
-    'contenido10';
+    'contenido10'
+
 }
+
 .contenido1 {
   grid-area: contenido1;
-  background-color: rgb(9, 91, 64);
+  background-color: rgb(59, 71, 162);
   border-radius: 20px;
+
 }
+
 .Luznatural {
   width: 230px;
   height: 230px;
@@ -45,9 +49,10 @@ centered {
 
 .contenido2 {
   grid-area: contenido2;
-  background-color: rgb(23, 123, 66);
+  background-color: rgb(71, 142, 255);
   border-radius: 200x;
 }
+
 
 .header2 {
   position: relative;
@@ -65,7 +70,7 @@ centered {
 
 .contenido3 {
   grid-area: contenido3;
-  background-color: rgb(2, 68, 46);
+  background-color: rgb(55, 162, 255);
   border-radius: 20px;
 }
 
@@ -85,7 +90,7 @@ centered {
 
 .contenido4 {
   grid-area: contenido4;
-  background-color: rgb(15, 18, 106);
+  background-color: rgb(11, 122, 240);
   border-radius: 20px;
 }
 
@@ -105,7 +110,7 @@ centered {
 
 .contenido5 {
   grid-area: contenido5;
-  background-color: rgb(134, 20, 121);
+  background-color: rgb(59, 71, 162);
   border-radius: 20px;
 }
 
@@ -125,7 +130,7 @@ centered {
 
 .contenido6 {
   grid-area: contenido6;
-  background-color: rgb(44, 162, 18);
+  background-color: rgb(71, 142, 255);
   border-radius: 20px;
 }
 
@@ -145,7 +150,7 @@ centered {
 
 .contenido7 {
   grid-area: contenido7;
-  background-color: rgb(164, 34, 34);
+  background-color: rgb(55, 162, 255);
   border-radius: 20px;
 }
 
@@ -165,7 +170,7 @@ centered {
 
 .contenido8 {
   grid-area: contenido8;
-  background-color: rgb(73, 6, 82);
+  background-color: rgb(11, 122, 240);
   border-radius: 20px;
 }
 
@@ -185,7 +190,7 @@ centered {
 
 .contenido9 {
   grid-area: contenido9;
-  background-color: rgb(9, 91, 64);
+  background-color: rgb(59, 71, 162);
   border-radius: 20px;
 }
 
@@ -205,7 +210,7 @@ centered {
 
 .contenido10 {
   grid-area: contenido10;
-  background-color: rgb(23, 123, 66);
+  background-color: rgb(71, 142, 255);
   border-radius: 20px;
 }
 
@@ -236,8 +241,7 @@ centered {
     display: grid;
     grid-gap: 5px;
     grid-template-rows: 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr;
-    grid-template-areas:
-      'contenido1 contenido1 contenido1 contenido1'
+    grid-template-areas: 'contenido1 contenido1 contenido1 contenido1'
       'contenido1 contenido1 contenido1 contenido1'
       'contenido2 contenido2 contenido2 contenido2'
       'contenido2 contenido2 contenido2 contenido2'
@@ -257,5 +261,6 @@ centered {
       'contenido9 contenido9 contenido9 contenido9'
       'contenido10 contenido10 contenido10 contenido10'
       'contenido10 contenido10 contenido10 contenido10';
+
   }
 }

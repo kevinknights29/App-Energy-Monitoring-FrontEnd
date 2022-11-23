@@ -9,9 +9,9 @@ const Contenido3 = () => {
           className='Limpiar'
           alt='Limpiar'
         />
-        Es importante mantener totalmente limpias las pantallas, focos y
-        lámparas de luz de nuestras clases. De esta forma la luz emitida se
-        optimiza al máximo.
+        Es importante mantener totalmente limpias las pantallas, focos y lámparas
+        de luz de nuestras clases. De esta forma la luz emitida se optimiza al
+        máximo.
       </header>
     </React.Fragment>
   )

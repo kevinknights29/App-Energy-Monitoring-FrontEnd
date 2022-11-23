@@ -22,11 +22,16 @@ import Content19 from './Content19'
 import Content20 from './Content20'
 import Content21 from './Content21'
 import Content22 from './Content22'
+import Content23 from './Content23'
+import Content24 from './Content24'
+import Content25 from './Content25'
 
-function Dashboard () {
+
+function Dashboard() {
   return (
+
     <React.Fragment>
-      <section className='section'>
+      <section className='section'> <br /> <div className='Dash'>DASHBOARD</div>
         <div className='layout'>
           <div className='content1 centered'>
             <Content1 />
@@ -37,6 +42,7 @@ function Dashboard () {
           <div className='content3 centered'>
             <Content3 />
           </div>
+
           <div className='content4 centered'>
             <Content4 />
           </div>
@@ -90,6 +96,9 @@ function Dashboard () {
           <div className='content19 centered'>
             <Content19 />
           </div>
+          <div className='content25 centered'>
+            <Content25 />
+          </div>
           <div className='content20 centered'>
             <Content20 />
           </div>
@@ -98,6 +107,12 @@ function Dashboard () {
           </div>
           <div className='content22 centered'>
             <Content22 />
+          </div>
+          <div className='content23 centered'>
+            <Content23 />
+          </div>
+          <div className='content24 centered'>
+            <Content24 />
           </div>
         </div>
       </section>

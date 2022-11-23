@@ -1,0 +1,53 @@
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout{
+    border-style: inset;
+    border-color: black;
+    border-width: thick;
+    width: 200%;
+    height: 300vh;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 100%;
+    grid-template-rows: 5fr 5fr  ;
+    grid-template-areas: 'Calendario1'
+                         'Cali1';
+                         
+}
+.Calendario1{
+    grid-area: content1;
+    background-color: rgb(9, 91, 64);
+    border-radius: 10px;
+}
+.Cal1{
+    grid-area: content2;
+    background-color: rgb(23, 123, 66);
+    border-radius: 10px;
+}
+
+
+.section{
+    background-color: rgb(0, 0, 0);
+    border-style: inset;
+    border-color: black;
+}
+
+@media only screen and (min-width: 768px){
+    .layout{
+        width: 100%;
+        height: 200vh;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(4, 20px);
+        grid-template-rows: 10fr 10fr ;
+        grid-template-areas: 'Calendario1  Calendario1 Calendario1 Calendario1'
+                             'Calendario1  Calendario1 Calendario1 Calendario1'
+                             'Cal1 Cal1 Cal1 Cal1'
+                             'Cal1 Cal1 Cal1 Cal1';
+                             
+    }
+
+}

@@ -24,14 +24,19 @@ export default function Example() {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
+
+          boxShadow: 1,
+          borderRadius: 2,
           p: 2,
           minWidth: 300
         }}
       >
-        <Box sx={{ color: 'white' }}>AMPERAJE 2</Box> <br />
-        <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium' }}>
-          98.3 A
+
+        <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium', align: 'center' }}>
+          CONSUMOS Y COSTO
         </Box>
+
+
       </Box>
     </ThemeProvider>
   )

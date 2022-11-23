@@ -1,9 +1,8 @@
-/* calendar event */
-
 .month_default_event {
   overflow: hidden;
   border-radius: 15px;
 }
+
 .month_default_event_inner {
   background: #636363;
   border-color: #777777;
@@ -16,13 +15,13 @@
   left: 0px;
   width: 30px;
 }
+
 .month_default_event_bar_inner {
   background: #888888;
   border-radius: 15px;
   width: 30px;
 }
 
-/* context menu icons */
 .icon:before {
   position: absolute;
   left: 0px;
@@ -36,18 +35,23 @@
 .icon-blue:before {
   background-color: blue;
 }
+
 .icon-green:before {
   background-color: green;
 }
+
 .icon-yellow:before {
   background-color: yellow;
 }
+
 .icon-red:before {
   background-color: red;
 }
+
 .icon-purple:before {
   background-color: purple;
 }
+
 .icon-brown:before {
   background-color: brown;
 }

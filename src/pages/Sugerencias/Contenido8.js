@@ -10,9 +10,9 @@ const Contenido8 = () => {
           alt='persiana'
         />
         Las persianas o toldos son una solución para que el sol no incida
-        directamente en las zonas donde están trabajadores o clientes. Se
-        calcula que su utilización contribuye a un ahorro de hasta el 10% en la
-        factura energética.
+        directamente en las zonas donde están trabajadores o clientes. Se calcula
+        que su utilización contribuye a un ahorro de hasta el 10% en la factura
+        energética.
       </header>
     </React.Fragment>
   )

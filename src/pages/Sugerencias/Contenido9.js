@@ -9,10 +9,10 @@ const Contenido9 = () => {
           className='Standby'
           alt='Standby'
         />
-        Recordemos que los aparatos eléctricos del colegio en “stand-by”
-        consumen energía. Esto es especialmente en un colegio, escuela o
-        instituto donde son muchos los equipamientos electrónicos susceptibles
-        de ser apagados completamente.
+        Recordemos que los aparatos eléctricos del colegio en “stand-by” consumen
+        energía. Esto es especialmente en un colegio, escuela o instituto donde
+        son muchos los equipamientos electrónicos susceptibles de ser apagados
+        completamente.
       </header>
     </React.Fragment>
   )
