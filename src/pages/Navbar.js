@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { faChartLine } from '@fortawesome/free-solid-svg-icons'
 import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
-import { faBookOpenReader } from '@fortawesome/free-solid-svg-icons'
+// import { faBookOpenReader } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
 export default function Navbar() {
@@ -27,9 +27,9 @@ export default function Navbar() {
           <CustomLink to='/Sugerencias'>
             <FontAwesomeIcon icon={faCommentDots} size='3x' />
           </CustomLink>
-          <CustomLink to='/Manual'>
+          {/* <CustomLink to='/Manual'>
             <FontAwesomeIcon icon={faBookOpenReader} size='3x' />
-          </CustomLink>
+          </CustomLink> */}
         </ul>
       </nav>
     </React.Fragment>

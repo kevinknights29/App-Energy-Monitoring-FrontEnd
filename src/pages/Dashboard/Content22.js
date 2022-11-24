@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Box, ThemeProvider, createTheme } from '@mui/system'
 
 const theme = createTheme({
@@ -20,6 +20,33 @@ const theme = createTheme({
 })
 
 export default function Example() {
+  const [vals, setVals] = useState([])
+
+  useEffect(() => {
+    fetch("https://app-energy-monitoring-api.azurewebsites.net/api/measurements/",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    ).then(
+      resp => resp.json()
+    ).then(
+      resp => setVals(resp)
+    ).catch(
+      error => console.log(error)
+    )
+  }, [])
+
+  let currentDate = new Date()
+  let cDay = currentDate.getDate();
+  let cMonth = currentDate.getMonth() + 1;
+  let cYear = currentDate.getFullYear();
+  let todayDate = cYear.toString() + "-" + cMonth.toString() + "-" + cDay.toString()
+  const today_demand_val = vals.filter(vals => ((vals.date === todayDate) && (vals.unit === "Wh")))
+  const today_demand_vals = today_demand_val.map(today_demand_val => { return parseFloat(today_demand_val.value) })
+
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -32,7 +59,7 @@ export default function Example() {
           Consumo total (Últimos 24 horas){' '}
         </Box> <br />
         <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium' }}>
-          98.3 kWh
+          {Math.max(...today_demand_vals)} Wh
         </Box>
       </Box>
     </ThemeProvider>

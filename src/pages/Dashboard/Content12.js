@@ -30,7 +30,7 @@ export default function Example() {
       >
         <Box sx={{ color: 'white' }}>POTENCIA 4</Box> <br />
         <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium' }}>
-          98.3 W
+          -
         </Box>
 
       </Box>

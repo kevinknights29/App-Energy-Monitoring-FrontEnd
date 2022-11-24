@@ -16,6 +16,7 @@
   height: 300vh;
   display: grid;
   grid-gap: 5px;
+  margin-left: 140px;
   grid-template-columns: 100%;
   grid-template-rows: 5fr 5fr 5fr 5fr 2fr 2fr 1fr;
   grid-template-areas: 'content1'
@@ -53,11 +54,19 @@
   color: black;
 }
 
+.content1 canvas {
+  width: 550px;
+}
+
 .content2 {
   grid-area: content2;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   color: black;
+}
+
+.content2 canvas {
+  width: 550px;
 }
 
 .content3 {
@@ -67,11 +76,19 @@
   color: black;
 }
 
+.content3 canvas {
+  width: 550px;
+}
+
 .content4 {
   grid-area: content4;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   color: black;
+}
+
+.content4 canvas {
+  width: 550px;
 }
 
 .content5 {

@@ -30,7 +30,7 @@ export default function Example() {
       >
         <Box sx={{ color: 'white' }}>AMPERAJE 2</Box> <br />
         <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium' }}>
-          98.3 A
+          -
         </Box>
       </Box>
     </ThemeProvider>

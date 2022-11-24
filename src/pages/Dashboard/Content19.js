@@ -30,7 +30,7 @@ export default function Example() {
       >
         <Box sx={{ color: 'white' }}>CONSUMO EN TIEMPO REAL 3</Box> <br />
         <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium' }}>
-          98.3 Wh
+          -
         </Box>
       </Box>
     </ThemeProvider>

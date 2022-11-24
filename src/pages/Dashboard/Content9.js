@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Box, ThemeProvider, createTheme } from '@mui/system'
 
 const theme = createTheme({
@@ -20,6 +20,27 @@ const theme = createTheme({
 })
 
 export default function Example() {
+  const [vals, setVals] = useState([])
+
+  useEffect(() => {
+    fetch("https://app-energy-monitoring-api.azurewebsites.net/api/measurements/",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    ).then(
+      resp => resp.json()
+    ).then(
+      resp => setVals(resp)
+    ).catch(
+      error => console.log(error)
+    )
+  }, [])
+
+  const last_power_val = vals.filter(vals => vals.unit === "W").slice(-1)
+
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -30,7 +51,7 @@ export default function Example() {
       >
         <Box sx={{ color: 'white' }}>POTENCIA 1</Box><br />
         <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium' }}>
-          98.3 W
+          {last_power_val.map(last_power_val => { return last_power_val.value })}
         </Box>
 
       </Box>

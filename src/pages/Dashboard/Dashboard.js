@@ -42,7 +42,6 @@ function Dashboard() {
           <div className='content3 centered'>
             <Content3 />
           </div>
-
           <div className='content4 centered'>
             <Content4 />
           </div>

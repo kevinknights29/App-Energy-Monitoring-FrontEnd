@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Box, ThemeProvider, createTheme } from '@mui/system'
 
 const theme = createTheme({
@@ -20,6 +20,46 @@ const theme = createTheme({
 })
 
 export default function Example() {
+  const [vals, setVals] = useState([])
+
+  useEffect(() => {
+    fetch("https://app-energy-monitoring-api.azurewebsites.net/api/measurements/",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    ).then(
+      resp => resp.json()
+    ).then(
+      resp => setVals(resp)
+    ).catch(
+      error => console.log(error)
+    )
+  }, [])
+
+  let currentDate = new Date()
+  currentDate.setDate(currentDate.getDate() - 30);
+  let cDay = currentDate.getDate();
+  let cMonth = currentDate.getMonth() + 1;
+  let cYear = currentDate.getFullYear();
+  let todayDate = cYear.toString() + "-" + cMonth.toString() + "-" + cDay.toString()
+  const last_30d_demand_val = vals.filter(vals => ((vals.date === todayDate) && (vals.unit === "Wh")))
+  const last_30d_demand_vals = last_30d_demand_val.map(last_30d_demand_val => { return parseFloat(last_30d_demand_val.value) })
+
+  function arrayAverage(arr) {
+    //Find the sum
+    var sum = 0;
+    for (var i in arr) {
+      sum += arr[i];
+    }
+    //Get the length of the array
+    var numbersCnt = arr.length;
+    //Return the average / mean.
+    return (sum / numbersCnt);
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -32,7 +72,7 @@ export default function Example() {
           Consumo total (Últimos 30 días)
         </Box> <br />
         <Box sx={{ color: 'white', fontSize: 34, fontWeight: 'medium' }}>
-          98.3 kWh
+          {arrayAverage(last_30d_demand_vals)} Wh
         </Box>
       </Box>
     </ThemeProvider>
