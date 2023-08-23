@@ -1,0 +1,98 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    padding: 128px 16px;
+    background-color: lightblue;
+    text-align: center;
+    position: relative;
+}
+
+.header .header-bg {
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.header a {
+    position: relative;
+}
+
+.header h1 {
+    font-size: 64px;
+    text-align: center;
+    position: relative;
+}
+
+.header .btn {
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 12px;
+    border-color: gray;
+    color: darkblue;
+}
+
+.content {
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content h2 {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-right: 60px;
+}
+
+#proposal {
+    background-color: lightgray;
+}
+
+#problem h2 {
+    text-align: right;
+}
+
+#proposal h2 {
+    text-align: left;
+    margin-left: 60px;
+}
+
+#objectives h2 {
+    text-align: right;
+}
+
+.content p {
+    font-size: 24px;
+    text-align: justify;
+}
+
+.structure-div {
+    display: flex;
+}
+
+.structure-div .text {
+    width: 60%;
+    margin-left: 40px;
+}
+
+.structure-div img {
+    margin: 0%;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 0%;
+    width: 560px;
+    height: 400px;
+    border: 2px solid black;
+}
